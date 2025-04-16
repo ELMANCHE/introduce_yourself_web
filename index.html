@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ELIAS_MANCHEGO</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+
+    <!--pagina de bienvenida-->
+    <header class="header content">
+      <div class="header-video">
+        <video src="./recursos/video_presen.mp4" muted autoplay loop></video>
+      </div>
+      <div class="header-overlay"></div>
+      <div class="header-content">
+        <h1>BIENVENIDOS A MI PORTAFOLIO</h1>
+        <p class="brand-signature">by Elias Manchego</p>
+        
+        <a href="./pagprincipal.html" class="btn">ingresa ahora</a>
+      </div>
+    </header>
+
+    <!-- Elemento de audio -->
+    <audio id="miAudio" preload="auto">
+      <source src="./recursos/mp3/audiocool.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Script para controlar el audio , no lo hice en un javascript separado porque no agregare mas de ello en este proyecto-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('miAudio');
+        audio.currentTime = 44; // Inicia en el segundo 0:44
+        audio.muted = true; // Obligatorio para autoplay en navegadores modernos 
+        
+        audio.play().then(() => {
+          audio.muted = false; // Intenta activar el sonido después de iniciar 
+        }).catch(error => {
+          console.log("Activa el sonido manualmente. Bloqueado por el navegador."); 
+        });
+      });
+    </script>
+  </body>
+</html>
