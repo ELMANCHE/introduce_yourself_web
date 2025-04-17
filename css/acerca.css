@@ -1,0 +1,211 @@
+/* ========================
+   RESET & BOX-SIZING
+   ======================== */
+   * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  /* ========================
+     TIPOGRAFÍA GLOBAL
+     ======================== */
+  body {
+    font-family: sans-serif;
+  }
+  
+  /* ========================
+     HEADER / MENÚ (SIN TOCAR)
+     ======================== */
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 0 6%;
+  }
+  
+  .logo {
+    margin-left: 30px;
+  }
+  .logo a {
+    text-decoration: none;
+    color: #61c714;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    margin-right: 10px;
+  }
+  .navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: #61c714;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .navbar a:hover {
+    background: #223413;
+  }
+  
+  /* ========================
+     MEDIA QUERY MENÚ MÓVIL
+     ======================== */
+  @media (max-width: 768px) {
+    p {
+      padding: 0 50px;
+    }
+    .title {
+      margin-bottom: 0;
+      font-size: 40px;
+    }
+    .sau,
+    .about {
+      height: 100vh;
+      padding: 50px 0;
+    }
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .f-enlaces {
+      display: none;
+    }
+    .navbar {
+      display: none;
+    }
+  }
+  
+  /* ========================
+     SECCIÓN PERFIL “HERO”
+     ======================== */
+  .hero {
+    position: relative;
+    top: 63px;                            /* baja la sección justo debajo del header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 63px);           /* ocupa toda la ventana excepto el header */
+    padding: 4rem 6%;                      /* mismo gutter que el header */
+    background-color: #d3d3d3;
+    box-sizing: border-box;
+  }
+  
+  .hero-content {
+    max-width: 45%;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-family: sans-serif;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  .hero-content h2 {
+    font-family: sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-content p {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Botón “Más Información” */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  .btn:hover {
+    background-color: #08e351;
+  }
+  
+  /* Iconos sociales */
+  .social {
+    margin-top: 2rem;
+  }
+  .social a {
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.2s;
+  }
+  .social a:hover {
+    color: #000000;
+  }
+  
+  /* Imagen con “blob” detrás */
+  .hero-image {
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #000000;
+    border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    z-index: 1;
+    opacity: 0.9;
+  }
+  .hero-image img {
+    position: relative;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  /* ========================
+     MEDIA QUERY SECTION HERO
+     ======================== */
+  @media (max-width: 900px) {
+    .hero {
+      flex-direction: column-reverse;
+      padding: 2rem 4%;
+      height: auto;                      /* deja que la sección crezca si es necesario */
+    }
+    .hero-content,
+    .hero-image {
+      width: 100%;
+      max-width: 100%;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+    .hero-content h2 {
+      font-size: 1.5rem;
+    }
+    .hero-image::before {
+      width: 350px;
+      height: 350px;
+    }
+    .hero-image img {
+      width: 250px;
+    }
+  }
+  

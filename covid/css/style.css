@@ -1,0 +1,39 @@
+body { margin:10px; background-image: url("../images/fondo2.jpg"); }
+
+.container {
+  width:800px;
+  margin:0 auto;
+}
+
+.barra {
+  background-color:#1c87ce;
+  color: #ffffff;
+  font-size: 20px;
+  height: 30px; width: 240px;
+}
+#my_canvas{ 
+  background:#000000; 
+  border:#000 1px solid; 
+}
+.boton{
+    color:rgb(17, 191, 210);
+    font-size: 40px;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 8px;
+    border:2px solid rgb(29, 130, 145);
+}
+.boton:hover{
+    background-color: white;
+    color: #000000;
+}
+
+.inicio{
+  color:rgb(17, 191, 210);
+    font-size: 40px;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 10px;
+    border:2px solid rgb(29, 130, 145);
+
+}
