@@ -18,7 +18,7 @@
   }
   
   /* ========================
-     HEADER / MENÚ (SIN TOCAR)
+     HEADER / MENÚ
      ======================== */
   .head {
     display: flex;
@@ -59,46 +59,17 @@
   }
   
   /* ========================
-     MEDIA QUERY MENÚ MÓVIL
-     ======================== */
-  @media (max-width: 768px) {
-    p {
-      padding: 0 50px;
-    }
-    .title {
-      margin-bottom: 0;
-      font-size: 40px;
-    }
-    .sau,
-    .about {
-      height: 100vh;
-      padding: 50px 0;
-    }
-    .footer-section {
-      display: flex;
-      flex-direction: column;
-    }
-    .f-enlaces {
-      display: none;
-    }
-    .navbar {
-      display: none;
-    }
-  }
-  
-  /* ========================
-     SECCIÓN PERFIL “HERO”
+     SECCIÓN HERO PRINCIPAL
      ======================== */
   .hero {
     position: relative;
-    top: 63px;                            /* baja la sección justo debajo del header */
+    top: 63px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(100vh - 63px);           /* ocupa toda la ventana excepto el header */
-    padding: 4rem 6%;                      /* mismo gutter que el header */
+    height: calc(100vh - 63px);
+    padding: 4rem 6%;
     background-color: #d3d3d3;
-    box-sizing: border-box;
   }
   
   .hero-content {
@@ -106,13 +77,11 @@
     text-align: center;
   }
   .hero-content h1 {
-    font-family: sans-serif;
     font-size: 4rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
   .hero-content h2 {
-    font-family: sans-serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
@@ -122,11 +91,10 @@
     color: #333;
   }
   
-  /* Botón “Más Información” */
   .btn {
     display: inline-block;
     padding: 0.75rem 1.75rem;
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -137,7 +105,6 @@
     background-color: #08e351;
   }
   
-  /* Iconos sociales */
   .social {
     margin-top: 2rem;
   }
@@ -148,10 +115,9 @@
     transition: color 0.2s;
   }
   .social a:hover {
-    color: #000000;
+    color: #000;
   }
   
-  /* Imagen con “blob” detrás */
   .hero-image {
     position: relative;
     width: 45%;
@@ -164,7 +130,7 @@
     position: absolute;
     width: 500px;
     height: 500px;
-    background-color: #000000;
+    background-color: #000;
     border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
     top: 50%;
     left: 50%;
@@ -181,31 +147,111 @@
   }
   
   /* ========================
-     MEDIA QUERY SECTION HERO
+     BLOQUES SECUNDARIOS (ALTERNADOS)
+     ======================== */
+  .hero-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6%;
+    background-color: #d3d3d3;
+    gap: 2rem;
+  
+    /* ➤ AÑADIDO: que cada bloque llene la ventana menos el header */
+    min-height: calc(100vh - 63px);
+    box-sizing: border-box;
+  }
+  
+  .hero-block .hero-content,
+  .hero-block .hero-image {
+    width: 50%;
+  }
+  
+  .hero-block .hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-block .hero-content p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-block.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .hero-block .hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-block .hero-image::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #000;
+    border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    z-index: 1;
+    opacity: 0.9;
+  }
+  .hero-block .hero-image img {
+    position: relative;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  /* ========================
+     MEDIA QUERIES
      ======================== */
   @media (max-width: 900px) {
-    .hero {
+    .hero,
+    .hero-block,
+    .hero-block.reverse {
       flex-direction: column-reverse;
       padding: 2rem 4%;
-      height: auto;                      /* deja que la sección crezca si es necesario */
+      height: auto;
+      min-height: auto;
     }
+  
     .hero-content,
-    .hero-image {
+    .hero-image,
+    .hero-block .hero-content,
+    .hero-block .hero-image {
       width: 100%;
       max-width: 100%;
     }
+  
     .hero-content h1 {
       font-size: 3rem;
     }
-    .hero-content h2 {
+  
+    .hero-content h2,
+    .hero-block .hero-content h2 {
       font-size: 1.5rem;
     }
-    .hero-image::before {
+  
+    .hero-image img,
+    .hero-block .hero-image img {
+      width: 250px;
+    }
+  
+    .hero-image::before,
+    .hero-block .hero-image::before {
       width: 350px;
       height: 350px;
     }
-    .hero-image img {
-      width: 250px;
+  
+    .navbar {
+      display: none;
     }
   }
   
