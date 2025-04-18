@@ -1,6 +1,6 @@
-/* ========================
+/* 
    RESET & BOX-SIZING
-   ======================== */
+    */
    * {
     margin: 0;
     padding: 0;
@@ -10,16 +10,16 @@
     box-sizing: border-box;
   }
   
-  /* ========================
+  /* 
      TIPOGRAFÍA GLOBAL
-     ======================== */
+      */
   body {
     font-family: sans-serif;
   }
   
-  /* ========================
+  /* 
      HEADER / MENÚ
-     ======================== */
+      */
   .head {
     display: flex;
     align-items: center;
@@ -58,9 +58,9 @@
     background: #223413;
   }
   
-  /* ========================
+  /* 
      SECCIÓN HERO PRINCIPAL
-     ======================== */
+      */
   .hero {
     position: relative;
     top: 63px;
@@ -146,9 +146,9 @@
     z-index: 2;
   }
   
-  /* ========================
+  /* 
      BLOQUES SECUNDARIOS (ALTERNADOS)
-     ======================== */
+      */
   .hero-block {
     display: flex;
     align-items: center;
@@ -209,9 +209,9 @@
     z-index: 2;
   }
   
-  /* ========================
+  /* 
      MEDIA QUERIES
-     ======================== */
+      */
   @media (max-width: 900px) {
     .hero,
     .hero-block,
