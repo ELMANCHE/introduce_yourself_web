@@ -80,12 +80,6 @@ body {
   text-decoration: none;
 }
 
-@media (max-width: 960px) {
-  .content {
-    padding: 0 3rem 0 3rem;
-  }
-}
-
 
 
 body{
@@ -106,3 +100,68 @@ body{
   text-transform: lowercase; 
 }
 
+/* Responsive */
+@media (max-width: 1200px) {
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+  .header-content p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-content {
+    padding: 0 4rem;
+  }
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  .header-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 80vh;
+  }
+  .header-content h1 {
+    font-size: 1.75rem;
+  }
+  .header-content p {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-content {
+    padding: 0 1.5rem;
+  }
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+  .header-content p {
+    font-size: 0.9rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* Estilo para la firma de marca */
+.brand-signature {
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-top: 2rem;
+  text-transform: lowercase;
+  text-align: center;
+  display: block;
+}

@@ -55,7 +55,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 60vh;
-    background: url(../recursos/VIDEO_PRUEBA2.mp4) no-repeat center;
+    background: url(../recursos/principal_primera.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -142,7 +142,7 @@ p {
 }
 
 .price {
-    background: url(../recursos/VIDEO_BIENVE.mp4) no-repeat center;
+    background: url(../recursos/principal_segunda.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
@@ -260,5 +260,85 @@ p {
 
     .navbar {
         display: none;
+    }
+}
+
+/* Responsive*/
+@media (max-width: 992px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .header p {
+        font-size: 1.1rem;
+        padding: 0 10%;
+    }
+    
+    .box-container, .box-container2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .head {
+        padding: 0 10px;
+    }
+    
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 63px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        flex-direction: column;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navbar.active {
+        display: flex;
+    }
+    
+    .header {
+        min-height: 80vh;
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+    
+    .footer-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.75rem;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .box i {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    .box-container2 .box img {
+        width: 60px;
+        height: 60px;
     }
 }

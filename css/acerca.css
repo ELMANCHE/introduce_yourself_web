@@ -209,49 +209,117 @@
     z-index: 2;
   }
   
-  /* 
-     MEDIA QUERIES
-      */
-  @media (max-width: 900px) {
-    .hero,
-    .hero-block,
-    .hero-block.reverse {
-      flex-direction: column-reverse;
-      padding: 2rem 4%;
-      height: auto;
-      min-height: auto;
-    }
-  
-    .hero-content,
-    .hero-image,
-    .hero-block .hero-content,
-    .hero-block .hero-image {
-      width: 100%;
-      max-width: 100%;
-    }
-  
-    .hero-content h1 {
-      font-size: 3rem;
-    }
-  
-    .hero-content h2,
-    .hero-block .hero-content h2 {
-      font-size: 1.5rem;
-    }
-  
-    .hero-image img,
-    .hero-block .hero-image img {
-      width: 250px;
-    }
-  
-    .hero-image::before,
-    .hero-block .hero-image::before {
-      width: 350px;
-      height: 350px;
-    }
-  
-    .navbar {
-      display: none;
-    }
+/*
+  RESPONSIVE DESIGN
+*/
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
   }
   
+  .hero-image::before {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .hero-image img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .head {
+    padding: 0 4%;
+  }
+  
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 100%;
+  }
+  
+  .navbar.active {
+    display: flex;
+  }
+  
+  .navbar a {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #223413;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .hero,
+  .hero-block {
+    flex-direction: column-reverse;
+    padding: 2rem 4%;
+    min-height: auto;
+  }
+  
+  .hero-content,
+  .hero-image {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-image::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .hero-image img {
+    width: 200px;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .head {
+    height: 55px;
+  }
+  
+  .logo a {
+    font-size: 1.1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .hero-image::before {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .hero-image img {
+    width: 180px;
+  }
+  
+  .social a {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+}
